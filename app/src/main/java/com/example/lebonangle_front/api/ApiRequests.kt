@@ -5,6 +5,9 @@ import com.example.lebonangle_front.api.advert.AdvertJsonItem
 import com.example.lebonangle_front.api.advert.AdvertPostJsonItem
 import com.example.lebonangle_front.api.category.CategoriesJson
 import com.example.lebonangle_front.api.picture.PictureJson
+import com.example.lebonangle_front.api.picture.PicturePostJson
+import okhttp3.MultipartBody
+import okhttp3.RequestBody
 import retrofit2.Call
 import retrofit2.Response
 import retrofit2.http.*
@@ -30,4 +33,24 @@ interface ApiRequests {
     fun postAdvert(
         @Body advert: AdvertPostJsonItem
     ): Call<AdvertJsonItem>
+
+
+
+    @Headers(
+        "Accept: application/ld+json"
+    )
+    @Multipart
+    @POST("pictures")
+    fun postPicture(
+        @Part file: MultipartBody.Part
+    ): Call<PicturePostJson>
+
+    @Headers(
+            "Accept: application/ld+json"
+    )
+    @FormUrlEncoded
+    @POST("pictures")
+    fun postPicture2(
+            @Field("file") file: String
+    ): Call<PicturePostJson>
 }

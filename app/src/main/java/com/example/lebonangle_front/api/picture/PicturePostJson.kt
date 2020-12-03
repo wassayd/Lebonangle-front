@@ -1,6 +1,5 @@
 package com.example.lebonangle_front.api.picture
 
-data class PictureJson(
+data class PicturePostJson(
     val file: String,
-    val contentUrl: String
 )

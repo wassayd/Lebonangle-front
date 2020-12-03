@@ -1,8 +1,10 @@
 package com.example.lebonangle_front.advert
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ArrayAdapter
+import androidx.core.content.ContextCompat
 import com.example.lebonangle_front.R
 import com.example.lebonangle_front.api.ApiConnection
 import com.example.lebonangle_front.api.advert.AdvertPostJsonItem
@@ -30,8 +32,11 @@ class AdvertCreate : AppCompatActivity() {
             postAdvert()
         }
 
+        btnGoToUploadImage.setOnClickListener {
+            val intent = Intent(this, AdvertImageUpload::class.java)
+            ContextCompat.startActivity(this,intent,null)
+        }
     }
-
 
     private fun postAdvert(){
         val category = "api/categories/"+(spinnerCategoryAdvertCreate.selectedItem as CategoriesJsonItem).id
@@ -76,6 +81,5 @@ class AdvertCreate : AppCompatActivity() {
             }
         }
     }
-
 
 }
