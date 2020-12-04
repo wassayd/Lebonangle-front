@@ -44,13 +44,4 @@ interface ApiRequests {
     fun postPicture(
         @Part file: MultipartBody.Part
     ): Call<PicturePostJson>
-
-    @Headers(
-            "Accept: application/ld+json"
-    )
-    @FormUrlEncoded
-    @POST("pictures")
-    fun postPicture2(
-            @Field("file") file: String
-    ): Call<PicturePostJson>
 }

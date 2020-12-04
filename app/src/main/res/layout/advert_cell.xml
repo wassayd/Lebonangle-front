@@ -7,7 +7,7 @@
     android:layout_height="wrap_content"
     android:layout_marginTop="10dp"
     android:padding="10dp"
-    android:background="@color/design_default_color_secondary">
+    android:background="#EDEDED">
 
     <TextView
         android:id="@+id/tvTitle"

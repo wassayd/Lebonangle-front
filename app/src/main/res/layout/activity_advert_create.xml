@@ -128,13 +128,15 @@
         tools:text="Name"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/labelPrice" />
+
     <Button
         android:id="@+id/btnGoToUploadImage"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Upload Image"
-        app:layout_constraintBottom_toBottomOf="@+id/etPrice"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/etPrice"
+   />
+
     <Button
         android:id="@+id/btnPublishAdvert"
         android:layout_width="match_parent"

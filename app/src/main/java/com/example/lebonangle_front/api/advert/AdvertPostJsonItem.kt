@@ -8,5 +8,6 @@ data class AdvertPostJsonItem(
     val content: String,
     val email: String,
     val price: Float,
-    val title: String
+    val title: String,
+    val pictures: List<String>
 ): Serializable
